@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t rafa/docker-react .
+  - docker build -t rafa/docker-react -f Dockerfile.prod .
 
 script:
   - docker run rafa/docker-react npm run test -- --coverage
