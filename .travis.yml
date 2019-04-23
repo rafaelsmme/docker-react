@@ -4,3 +4,6 @@ services:
 
 before_install:
   - docker build -t rafa/docker-react .
+
+script:
+  - docker run rafa/docker-react npm run test -- --coverage
